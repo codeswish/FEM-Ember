@@ -8,13 +8,13 @@ var Router = Ember.Router.extend({
 Router.map(function() {
     this.route('orgs', {});
     this.route('org', {path: 'org/:id'}, function() {
-        this.route('repos', {});
+        this.route('repos');
 
         this.route('repo', {
-            path: ':id_repo'
+            path: ':idd'
         }, function() {
-            this.route('issues', {});
-            this.route('contributors', {});
+            this.route('issues');
+            this.route('contributors');
         });
     });
 });
