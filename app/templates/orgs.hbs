@@ -1,9 +1,9 @@
 <h2>Orgs</h2>
 
 <ul>
-<li>{{link-to 'Facebook' 'org.repos' 'facebook'}}</li>
-<li>{{link-to 'Jquery' 'org.repos' 'jquery'}}</li>
-<li>{{link-to 'Emberjs' 'org.repos' 'emberjs'}}</li>
+{{#each content as |org|}}
+<li>{{link-to org.id 'org' org.id}}</li>
+{{/each}}
 </ul>
 
 {{outlet}}

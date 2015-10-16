@@ -1,11 +1,9 @@
-<!-- BEGIN: repos template -->
 <h3>Facebook</h3>
 
 <ul>
-<li>React - {{link-to 'Issues' 'org.repo.issues' 'react'}} - {{link-to 'Contributors' 'org.repo.contributors' 'react'}}</li>
-<li>{{link-to 'Watchman' 'org.repo.issues' 'watchman'}}</li>
-<li>{{link-to 'Relay' 'org.repo.issues' 'relay'}}</li>
+{{#each content as |repo|}}
+<li>{{link-to repo.repo_id 'org.repo' repo.repo_id}}</li>
+{{/each}}
 </ul>
 
 {{outlet}}
-<!-- END: repos template -->
